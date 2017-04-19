@@ -47,6 +47,8 @@ define(['flight/lib/component', 'page/events', 'helpers/monitored_ajax', 'mixins
     });
 
     this.fetchTags = function(event, params) {
+      console.log('>>>>>>> event: ', event);
+      console.log('>>>>>>> params', params);
       monitoredAjax(this, this.attr.tagsResource)
         .done(sendTagsBackTo(this));
     };

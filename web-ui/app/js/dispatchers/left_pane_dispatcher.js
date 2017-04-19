@@ -55,7 +55,8 @@ define(
         this.on(document, events.ui.tags.loaded, this.selectTag);
         this.on(document, events.ui.tag.selected, this.pushUrlState);
         this.on(document, events.ui.tag.select, this.pushUrlState);
-        this.trigger(document, events.tags.want, { caller: this.$node });
+        console.log('>>>>>>>>>>>>>>>>> node', this.$node);
+        this.trigger(document, events.tags.want, { caller: this.$node});
       });
     }
   }
